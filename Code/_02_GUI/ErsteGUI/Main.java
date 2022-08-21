@@ -1,4 +1,4 @@
-package _10_GUI.ErsteGUI;
+package _02_GUI.ErsteGUI;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

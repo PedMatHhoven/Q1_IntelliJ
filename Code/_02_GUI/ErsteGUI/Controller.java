@@ -1,4 +1,4 @@
-package _10_GUI.ErsteGUI;
+package _02_GUI.ErsteGUI;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
