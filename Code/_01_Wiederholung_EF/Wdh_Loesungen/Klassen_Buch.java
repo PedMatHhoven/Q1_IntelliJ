@@ -1,13 +1,13 @@
-package _01_Wiederholung_EF;
+package _01_Wiederholung_EF.Wdh_Loesungen;
 
 import java.util.Scanner;
 
-public class Buch {
+public class Klassen_Buch {
     private int Seitenanzahl;
     private String Titel, Autor;
 
     //Konstruktor (gleicher Name wie Klasse!)
-    public Buch(String Autor, String Titel, int Anzahl) {
+    public Klassen_Buch(String Autor, String Titel, int Anzahl) {
         this.Seitenanzahl = Anzahl;
         this.Titel = Titel;
         this.Autor = Autor;
@@ -40,7 +40,7 @@ public class Buch {
 
     public static void main (String args[]) {
         //leeres Buch anlegen
-        Buch Buch1 = new Buch("", "", 0);
+        Klassen_Buch Buch1 = new Klassen_Buch("", "", 0);
 
         //Buchwerte über Eingabe abfragen:
         Scanner scan = new Scanner(System.in);

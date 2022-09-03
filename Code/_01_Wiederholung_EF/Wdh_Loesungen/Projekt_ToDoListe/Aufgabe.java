@@ -1,4 +1,4 @@
-package _01_Wiederholung_EF.ToDoListe;
+package _01_Wiederholung_EF.Wdh_Loesungen.Projekt_ToDoListe;
 
 public class Aufgabe {
   private String beschreibung;
