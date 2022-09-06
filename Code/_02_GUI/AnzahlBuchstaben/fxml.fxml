@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="259.0" prefWidth="419.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_02_GUI.AnzahlBuchstaben.Controller">
+   <children>
+      <Button fx:id="bt1" layoutX="184.0" layoutY="123.0" mnemonicParsing="false" onAction="#bt1_onClick" text="Anzahl" />
+      <Label fx:id="lb1" layoutX="48.0" layoutY="160.0" text="Ausgabe">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <TextField fx:id="tf1" layoutX="40.0" layoutY="42.0" prefHeight="25.0" prefWidth="340.0" text="Hier Text eingeben!" />
+      <Button fx:id="bt2" layoutX="157.0" layoutY="198.0" mnemonicParsing="false" onAction="#bt2_onClick" text="alles auf Anfang!" />
+      <TextField fx:id="tf2" layoutX="40.0" layoutY="82.0" prefHeight="25.0" prefWidth="340.0" text="Welchen Buchstaben suchen?" />
+   </children>
+</AnchorPane>
