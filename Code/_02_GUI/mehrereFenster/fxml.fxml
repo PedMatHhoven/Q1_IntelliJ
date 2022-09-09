@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="276.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_02_GUI.mehrereFenster.Controller">
+    <Label layoutX="65.0" layoutY="14.0" text="Hauptfenster">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+    <Button fx:id="bFenster2" layoutX="80.0" layoutY="80.0" mnemonicParsing="false" onAction="#oeffneFenster_2" text="Fenster 2 öffnen" />
+    <Button fx:id="bFenster3" layoutX="80.0" layoutY="120.0" mnemonicParsing="false" onAction="#oeffneFenster_3" text="Fenster 3 öffnen" />
+</AnchorPane>
