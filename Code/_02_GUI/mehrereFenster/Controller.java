@@ -10,10 +10,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Controller {
-    @FXML
+    //folgende Attribute benötigt man nur bei Verwendung der Version ganz unten!
+    /*@FXML
     Button bFenster2;
     @FXML
-    Button bFenster3;
+    Button bFenster3;*/
     //hier werden - abhängig vom Button - verschieden-artige Fenster vom selben Hauptfenster aus geöffnet
     //bei jedem Klick wird ein komplett neues Fenster erstellt!
     public void oeffneFenster_2(ActionEvent actionEvent) throws IOException {
