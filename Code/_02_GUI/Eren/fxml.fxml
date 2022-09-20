@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="field" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_02_GUI.Eren.Controller">
+   <children>
+      <Rectangle fx:id="p1" arcHeight="5.0" arcWidth="5.0" fill="#2d2b2b" height="75.0" layoutX="32.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" width="12.0" />
+      <Rectangle fx:id="p2" arcHeight="5.0" arcWidth="5.0" fill="#2d2b2b" height="75.0" layoutX="559.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" width="12.0" />
+      <Label fx:id="score1" layoutX="152.0" layoutY="23.0" prefHeight="123.0" prefWidth="65.0" text="0">
+         <font>
+            <Font name="Consolas" size="120.0" />
+         </font>
+      </Label>
+      <Label fx:id="score2" layoutX="377.0" layoutY="23.0" prefHeight="123.0" prefWidth="65.0" text="0">
+         <font>
+            <Font name="Consolas" size="120.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2d2b2b" height="409.0" layoutX="293.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="3.0" />
+      <Circle fx:id="ball" fill="#9c0cc9" layoutX="295.0" layoutY="60.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</AnchorPane>

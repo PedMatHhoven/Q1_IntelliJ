@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_02_GUI.PhilippAdam.controller">
+   <children>
+      <Button fx:id="bt1" layoutX="139.0" layoutY="125.0" mnemonicParsing="false" onAction="#bt1_onAction" text="1" />
+      <Button fx:id="bt2" layoutX="203.0" layoutY="125.0" mnemonicParsing="false" onAction="#bt2_onAction" text="2" />
+      <Button fx:id="bt3" layoutX="264.0" layoutY="125.0" mnemonicParsing="false" onAction="#bt3_onAction" text="3" />
+      <Button fx:id="bt4" layoutX="139.0" layoutY="161.0" mnemonicParsing="false" onAction="#bt4_onAction" text="4" />
+      <Button fx:id="bt5" layoutX="203.0" layoutY="161.0" mnemonicParsing="false" onAction="#bt5_onAction" text="5" />
+      <Button fx:id="bt6" layoutX="264.0" layoutY="161.0" mnemonicParsing="false" onAction="#bt6_onAction" text="6" />
+      <Button fx:id="bt7" layoutX="139.0" layoutY="200.0" mnemonicParsing="false" onAction="#bt7_onAction" text="7" />
+      <Button fx:id="bt8" layoutX="203.0" layoutY="200.0" mnemonicParsing="false" onAction="#bt8_onAction" text="8" />
+      <Button fx:id="bt9" layoutX="264.0" layoutY="200.0" mnemonicParsing="false" onAction="#bt9_onAction" text="9" />
+      <Button layoutX="203.0" layoutY="235.0" mnemonicParsing="false" onAction="#bt0_onAction" text="0" />
+      <Label fx:id="lb1" layoutX="135.0" layoutY="72.0" prefHeight="40.0" prefWidth="172.0" text="Deine Eingabe" />
+      <Button fx:id="plus" layoutX="300.0" layoutY="125.0" mnemonicParsing="false" onAction="#btplus_onAction" text="+" />
+      <Button fx:id="minus" layoutX="302.0" layoutY="161.0" mnemonicParsing="false" onAction="#btminus_onAction" text="-" />
+      <Button fx:id="mal" layoutX="302.0" layoutY="200.0" mnemonicParsing="false" onAction="#btmal_onAction" text="*" />
+      <Button fx:id="geteilt" layoutX="302.0" layoutY="235.0" mnemonicParsing="false" onAction="#btgeteilt_onAction" text="/" />
+      <Button fx:id="gleich" layoutX="301.0" layoutY="271.0" mnemonicParsing="false" onAction="#btgleich_onAction" text="=" />
+      <Button fx:id="delete" layoutX="326.0" layoutY="80.0" mnemonicParsing="false" onAction="#btdelete_onAction" prefHeight="25.0" prefWidth="79.0" text="Löschen" />
+   </children>
+</AnchorPane>
