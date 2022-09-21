@@ -1,4 +1,4 @@
-package _02_GUI.MarthaFabian;
+package _02_GUI.EinfacherTR;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

@@ -1,4 +1,4 @@
-package _02_GUI.Eren;
+package _02_GUI.Pong;
 
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
@@ -7,9 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.geometry.Bounds;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;

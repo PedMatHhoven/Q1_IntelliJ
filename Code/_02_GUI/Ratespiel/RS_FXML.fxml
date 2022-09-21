@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="191.0" prefWidth="493.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_02_GUI.Ratespiel.RS_Controller">
+   <children>
+      <GridPane layoutY="92.0" prefHeight="52.0" prefWidth="493.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="bt_Start" mnemonicParsing="false" onAction="#bt_Start_onClick" prefHeight="25.0" prefWidth="174.0" text="Los geht's!" GridPane.columnIndex="1" />
+            <Label prefHeight="17.0" prefWidth="170.0" text="Geben Sie hier ihre Zahl ein:" GridPane.rowIndex="1" />
+            <TextField fx:id="tf_Eingabe" text="Eingabe" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="bt_Eingabe" mnemonicParsing="false" onAction="#bt_Eingabe_onClick" prefHeight="25.0" prefWidth="180.0" text="Absenden" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Label alignment="CENTER" layoutY="6.0" prefHeight="35.0" prefWidth="493.0" text="Herzlich Willkommen beim Ratespiel!">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutY="41.0" prefHeight="17.0" prefWidth="493.0" text="Sie müssen bei diesem Spiel eine Zahl zwischen 1 und 100 erraten." />
+      <Label alignment="CENTER" layoutY="58.0" prefHeight="17.0" prefWidth="493.0" text="Es wird nur angezeigt, ob die Zahl größer oder kleiner ist." />
+      <Label fx:id="lbl_Lösung" alignment="CENTER" layoutY="161.0" prefHeight="17.0" prefWidth="493.0" text="Die gesuchte Zahl ist größer/kleiner/gleich Ihrer Eingabe." />
+   </children>
+</AnchorPane>
