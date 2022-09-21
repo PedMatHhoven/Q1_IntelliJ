@@ -1,4 +1,4 @@
-package _02_GUI.mehrereFenster;
+package _02_GUI.MehrereFenster;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

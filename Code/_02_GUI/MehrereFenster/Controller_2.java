@@ -1,4 +1,4 @@
-package _02_GUI.mehrereFenster;
+package _02_GUI.MehrereFenster;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
