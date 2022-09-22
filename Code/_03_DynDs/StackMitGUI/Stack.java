@@ -1,6 +1,6 @@
-package _03_DynDs;
-//alle Kommentare aus "Stack" wurden entfernt
-public class Stack2 <ContentType> {
+package _03_DynDs.StackMitGUI;
+
+public class Stack <ContentType> {
   private class StackNode {
     private ContentType content = null;
     private StackNode nextNode = null; 
@@ -25,7 +25,7 @@ public class Stack2 <ContentType> {
   
   private StackNode head;
   
-  public Stack2 () {
+  public Stack() {
     head = null; 
   }
   
