@@ -16,7 +16,7 @@ public class RS_Controller {
     @FXML
     TextField tf_Eingabe;
     @FXML
-    Label lbl_Lösung;
+    Label lbl_Loesung;
 
     private int gesuchteZahl;
     private int anzahlVersuche;
@@ -24,22 +24,21 @@ public class RS_Controller {
     public void bt_Start_onClick(ActionEvent actionEvent){
         Random random = new Random();
         gesuchteZahl = random.nextInt(0, 100);
-        lbl_Lösung.setText("Zu suchende Zahl wurde ermittelt. Viel Glück beim finden!");
+        lbl_Loesung.setText("Zu suchende Zahl wurde ermittelt. Viel Glück beim Finden!");
     }
-
 
     public void bt_Eingabe_onClick(ActionEvent actionEvent){
         anzahlVersuche += 1;
-        //int eingabe = Integer.valueOf(tf_Eingabe.getText().toString());
-        if (Integer.valueOf(tf_Eingabe.getText().toString()) == gesuchteZahl){
-            lbl_Lösung.setText
-                    ("Sie haben in " + anzahlVersuche + " Versuchen die gesuchte Zahl "+ gesuchteZahl + " erraten! Glückwunsch!");
+        int eingabe = Integer.valueOf(tf_Eingabe.getText().toString());
+        if (eingabe == gesuchteZahl){
+            lbl_Loesung.setText
+            ("Sie haben in " + anzahlVersuche + " Versuchen die gesuchte Zahl "+ gesuchteZahl + " erraten! Glückwunsch!");
         }
-        else if (Integer.valueOf(tf_Eingabe.getText().toString()) < gesuchteZahl) {
-            lbl_Lösung.setText("Die gesuchte Zahl ist größer als Ihre Eingabe!");
+        else if (eingabe < gesuchteZahl) {
+            lbl_Loesung.setText("Die gesuchte Zahl ist größer als Ihre Eingabe!");
         }
-        else if (Integer.valueOf(tf_Eingabe.getText().toString()) > gesuchteZahl) {
-            lbl_Lösung.setText("Die gesuchte Zahl ist kleiner als Ihre Eingabe!");
+        else if (eingabe > gesuchteZahl) {
+            lbl_Loesung.setText("Die gesuchte Zahl ist kleiner als Ihre Eingabe!");
         }
     }
 }
