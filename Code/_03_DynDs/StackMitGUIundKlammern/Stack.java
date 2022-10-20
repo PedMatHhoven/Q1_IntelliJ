@@ -1,4 +1,4 @@
-package _03_DynDs.StackMitGUI;
+package _03_DynDs.StackMitGUIundKlammern;
 
 public class Stack <ContentType> {
   private class StackNode {

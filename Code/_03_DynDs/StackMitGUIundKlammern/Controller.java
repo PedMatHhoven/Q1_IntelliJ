@@ -1,6 +1,5 @@
-package _03_DynDs.StackMitGUI;
+package _03_DynDs.StackMitGUIundKlammern;
 
-import _03_DynDs.StackMitGUI.Stack;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
