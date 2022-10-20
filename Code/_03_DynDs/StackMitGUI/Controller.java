@@ -1,5 +1,6 @@
 package _03_DynDs.StackMitGUI;
 
+import _03_DynDs.StackMitGUI.Stack;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
@@ -9,13 +10,17 @@ public class Controller {
     @FXML private TextField tfIsEmpty;
     @FXML private TextField tfPush;
     @FXML private TextField tfTop;
+    @FXML private TextField tfKlammern;
+    @FXML private TextField tfKopie;
     @FXML private ListView lv;
     @FXML private Button btIsEmpty;
     @FXML private Button btPush;
     @FXML private Button btPop;
     @FXML private Button btTop;
+    @FXML private Button btKlammern;
+    @FXML private Button btKopie;
 
-    private Stack <String> s;
+    private Stack<String> s;
 
     public void btStack_click() {
         s = new Stack <String> ();
@@ -24,6 +29,8 @@ public class Controller {
         btPush.setDisable(false);
         btPop.setDisable(false);
         btTop.setDisable(false);
+        btKlammern.setDisable(false);
+        btKopie.setDisable(false);
     }
 
     public void btIsEmpty_click() {
@@ -60,4 +67,42 @@ public class Controller {
             s2.pop();
         }
     }
+
+    public void btKopie_click() {
+        String k = tfKlammern.getText();
+        tfKopie.setText(k);
+    }
+
+    public void btKlammern_click() {
+        String k = tfKlammern.getText();
+        //offene Klammern kommen auf den Stack
+        if (!k.equals("") && (k.charAt(0)=='(' || k.charAt(0)=='[' || k.charAt(0)=='{')) {
+            s.push(k.substring(0,1));
+            gibAus();
+            k = k.substring(1);
+            tfKlammern.setText(k);
+        }
+        //geschlossene Klammern werden mit oberstem Stack-Eintrag verglichen
+        else if (!k.equals("") && !s.isEmpty() &&
+                (k.charAt(0)==')' && s.top().equals("(") ||
+                k.charAt(0)==']' && s.top().equals("[") ||
+                k.charAt(0)=='}' && s.top().equals("{"))) {
+            s.pop();
+            gibAus();
+            k = k.substring(1);
+            tfKlammern.setText(k);
+            //Stack leer, Textfeld leer, kein Fehler - also wohlgeformt :)!
+            if (s.isEmpty() && k.equals("")) {
+                tfKlammern.setText("wohlgef. :)");
+            }
+        }
+        //Fehler
+        else {
+            tfKlammern.setText("inakzept.!");
+            s = new Stack();
+            gibAus();
+        }
+    }
+
+
 }
