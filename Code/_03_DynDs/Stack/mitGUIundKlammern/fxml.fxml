@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="428.0" prefWidth="232.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_03_DynDs.Stack.mitGUIundKlammern.Controller">
+   <children>
+      <Button fx:id="btStack" layoutX="35.0" layoutY="29.0" mnemonicParsing="false" onAction="#btStack_click" prefHeight="30.0" prefWidth="74.0" text="Stack" />
+      <Button fx:id="btIsEmpty" disable="true" layoutX="35.0" layoutY="70.0" mnemonicParsing="false" onAction="#btIsEmpty_click" prefHeight="30.0" prefWidth="74.0" text="isEmpty" />
+      <Button fx:id="btPush" disable="true" layoutX="35.0" layoutY="112.0" mnemonicParsing="false" onAction="#btPush_click" prefHeight="30.0" prefWidth="74.0" text="push" />
+      <Button fx:id="btPop" disable="true" layoutX="35.0" layoutY="154.0" mnemonicParsing="false" onAction="#btPop_click" prefHeight="30.0" prefWidth="74.0" text="pop" />
+      <Button fx:id="btTop" disable="true" layoutX="35.0" layoutY="195.0" mnemonicParsing="false" onAction="#btTop_click" prefHeight="30.0" prefWidth="74.0" text="top" />
+      <TextField fx:id="tfPush" layoutX="123.0" layoutY="115.0" prefHeight="25.0" prefWidth="74.0" />
+      <TextField fx:id="tfIsEmpty" layoutX="123.0" layoutY="73.0" prefHeight="25.0" prefWidth="74.0" />
+      <TextField fx:id="tfTop" layoutX="123.0" layoutY="198.0" prefHeight="25.0" prefWidth="74.0" />
+      <ListView fx:id="lv" layoutX="123.0" layoutY="267.0" prefHeight="133.0" prefWidth="74.0" />
+      <Button fx:id="btKlammern" disable="true" layoutX="35.0" layoutY="267.0" mnemonicParsing="false" onAction="#btKlammern_click" prefHeight="30.0" prefWidth="74.0" text="Klammern" />
+      <TextField fx:id="tfKlammern" layoutX="35.0" layoutY="304.0" prefHeight="25.0" prefWidth="74.0" text="Ausdruck" />
+      <TextField fx:id="tfKopie" disable="true" layoutX="35.0" layoutY="375.0" prefHeight="25.0" prefWidth="74.0" text="Kopie" />
+      <Button fx:id="btKopie" disable="true" layoutX="35.0" layoutY="337.0" mnemonicParsing="false" onAction="#btKopie_click" prefHeight="30.0" prefWidth="74.0" text="Kopie" />
+   </children>
+</AnchorPane>

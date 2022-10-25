@@ -1,4 +1,4 @@
-package _03_DynDs.StackMitGUIundKlammern;
+package _03_DynDs.Stack.mitGUIundUPN;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -22,7 +22,7 @@ public class Controller {
     private Stack<String> s;
 
     public void btStack_click() {
-        s = new Stack <String> ();
+        s = new Stack<String>();
         gibAus();
         btIsEmpty.setDisable(false);
         btPush.setDisable(false);
@@ -52,7 +52,7 @@ public class Controller {
 
     public void gibAus() {
         //Ausgabe über Hilfsstack
-        Stack <String> s2 = new Stack <String> ();
+        Stack<String> s2 = new Stack<String>();
         lv.getItems().clear();
         while (!s.isEmpty()){
             //vorderstes Element ausgeben + zwischenspeichern auf Hilfsstack + löschen
