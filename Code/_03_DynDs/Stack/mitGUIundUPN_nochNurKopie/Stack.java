@@ -1,4 +1,4 @@
-package _03_DynDs.Stack.mitGUIundUPN;
+package _03_DynDs.Stack.mitGUIundUPN_nochNurKopie;
 
 public class Stack <ContentType> {
   private class StackNode {
