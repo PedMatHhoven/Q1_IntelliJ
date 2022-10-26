@@ -49,7 +49,7 @@ public class Queue<ContentType> {
 	}
 
 	public void dequeue() {
-		if (!this.isEmpty()) {
+		if (!isEmpty()) {
 			head = head.getNext();
 			if (this.isEmpty()) {
 				head = null;
@@ -59,7 +59,7 @@ public class Queue<ContentType> {
 	}
 
 	public ContentType front() {
-		if (this.isEmpty()) {
+		if (isEmpty()) {
 			return null;
 		} else {
 			return head.getContent();

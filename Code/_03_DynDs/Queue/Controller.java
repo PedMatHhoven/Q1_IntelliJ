@@ -1,5 +1,6 @@
-package _03_DynDs.Stack.mitGUIundUPN_nochNurKopie;
+package _03_DynDs.Queue;
 
+import _03_DynDs.Stack.mitGUIundKlammern.Stack;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
@@ -22,7 +23,7 @@ public class Controller {
     private Stack<String> s;
 
     public void btStack_click() {
-        s = new Stack<String>();
+        s = new Stack <String> ();
         gibAus();
         btIsEmpty.setDisable(false);
         btPush.setDisable(false);
@@ -52,7 +53,7 @@ public class Controller {
 
     public void gibAus() {
         //Ausgabe über Hilfsstack
-        Stack<String> s2 = new Stack<String>();
+        Stack <String> s2 = new Stack <String> ();
         lv.getItems().clear();
         while (!s.isEmpty()){
             //vorderstes Element ausgeben + zwischenspeichern auf Hilfsstack + löschen
@@ -73,6 +74,33 @@ public class Controller {
     }
 
     public void btKlammern_click() {
-        //hier kommt UPN-Algoritmus rein!
+        String k = tfKlammern.getText();
+        //offene Klammern kommen auf den Stack
+        if (!k.equals("") && (k.charAt(0)=='(' || k.charAt(0)=='[' || k.charAt(0)=='{')) {
+            s.push(k.substring(0,1));
+            gibAus();
+            k = k.substring(1);
+            tfKlammern.setText(k);
+        }
+        //geschlossene Klammern werden mit oberstem Stack-Eintrag verglichen
+        else if (!k.equals("") && !s.isEmpty() &&
+                (k.charAt(0)==')' && s.top().equals("(") ||
+                k.charAt(0)==']' && s.top().equals("[") ||
+                k.charAt(0)=='}' && s.top().equals("{"))) {
+            s.pop();
+            gibAus();
+            k = k.substring(1);
+            tfKlammern.setText(k);
+            //Stack leer, Textfeld leer, kein Fehler - also wohlgeformt :)!
+            if (s.isEmpty() && k.equals("")) {
+                tfKlammern.setText("wohlgef. :)");
+            }
+        }
+        //Fehler
+        else {
+            tfKlammern.setText("inakzept.!");
+            s = new Stack();
+            gibAus();
+        }
     }
 }
