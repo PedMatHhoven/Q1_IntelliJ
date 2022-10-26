@@ -15,6 +15,6 @@ public class Main extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         pStage.setScene(scene);
         pStage.show();
-        pStage.setTitle("Stack & Co.");
+        pStage.setTitle("Queue");
     }
 }

@@ -8,99 +8,57 @@ import javafx.scene.control.TextField;
 
 public class Controller {
     @FXML private TextField tfIsEmpty;
-    @FXML private TextField tfPush;
-    @FXML private TextField tfTop;
-    @FXML private TextField tfKlammern;
-    @FXML private TextField tfKopie;
+    @FXML private TextField tfEnqueue;
+    @FXML private TextField tfFront;
     @FXML private ListView lv;
     @FXML private Button btIsEmpty;
-    @FXML private Button btPush;
-    @FXML private Button btPop;
-    @FXML private Button btTop;
-    @FXML private Button btKlammern;
-    @FXML private Button btKopie;
+    @FXML private Button btEnqueue;
+    @FXML private Button btDequeue;
+    @FXML private Button btFront;
 
-    private Stack<String> s;
+    private Queue<String> q;
 
-    public void btStack_click() {
-        s = new Stack <String> ();
+    public void btQueue_click() {
+        q = new Queue<String>();
         gibAus();
         btIsEmpty.setDisable(false);
-        btPush.setDisable(false);
-        btPop.setDisable(false);
-        btTop.setDisable(false);
-        btKlammern.setDisable(false);
-        btKopie.setDisable(false);
+        btEnqueue.setDisable(false);
+        btDequeue.setDisable(false);
+        btFront.setDisable(false);
     }
 
     public void btIsEmpty_click() {
-        if (s.isEmpty()) tfIsEmpty.setText("ja - leer!"); else tfIsEmpty.setText("nicht leer!");
+        if (q.isEmpty()) tfIsEmpty.setText("ja - leer!"); else tfIsEmpty.setText("nicht leer!");
     }
 
-    public void btPush_click() {
-        s.push(tfPush.getText());
+    public void btEnqueue_click() {
+        q.enqueue(tfEnqueue.getText());
         gibAus();
     }
 
-    public void btPop_click() {
-        s.pop();
+    public void btDequeue_click() {
+        q.dequeue();
         gibAus();
     }
 
-    public void btTop_click() {
-        tfTop.setText("" + s.top());
+    public void btFront_click() {
+        tfFront.setText("" + q.front());
     }
 
     public void gibAus() {
-        //Ausgabe über Hilfsstack
-        Stack <String> s2 = new Stack <String> ();
+        //Ausgabe über Hilfsschlange
+        Queue <String> q2 = new Queue <String> ();
         lv.getItems().clear();
-        while (!s.isEmpty()){
-            //vorderstes Element ausgeben + zwischenspeichern auf Hilfsstack + löschen
-            lv.getItems().add(s.top());
-            s2.push(s.top());
-            s.pop();
+        while (!q.isEmpty()){
+            //vorderstes Element ausgeben + zwischenspeichern auf Hilfsschlange + löschen
+            lv.getItems().add(q.front());
+            q2.enqueue(q.front());
+            q.dequeue();
         }
-        //Stack rekonstruieren (und Hilfsstack leeren)
-        while (!s2.isEmpty()){
-            s.push(s2.top());
-            s2.pop();
-        }
-    }
-
-    public void btKopie_click() {
-        String k = tfKlammern.getText();
-        tfKopie.setText(k);
-    }
-
-    public void btKlammern_click() {
-        String k = tfKlammern.getText();
-        //offene Klammern kommen auf den Stack
-        if (!k.equals("") && (k.charAt(0)=='(' || k.charAt(0)=='[' || k.charAt(0)=='{')) {
-            s.push(k.substring(0,1));
-            gibAus();
-            k = k.substring(1);
-            tfKlammern.setText(k);
-        }
-        //geschlossene Klammern werden mit oberstem Stack-Eintrag verglichen
-        else if (!k.equals("") && !s.isEmpty() &&
-                (k.charAt(0)==')' && s.top().equals("(") ||
-                k.charAt(0)==']' && s.top().equals("[") ||
-                k.charAt(0)=='}' && s.top().equals("{"))) {
-            s.pop();
-            gibAus();
-            k = k.substring(1);
-            tfKlammern.setText(k);
-            //Stack leer, Textfeld leer, kein Fehler - also wohlgeformt :)!
-            if (s.isEmpty() && k.equals("")) {
-                tfKlammern.setText("wohlgef. :)");
-            }
-        }
-        //Fehler
-        else {
-            tfKlammern.setText("inakzept.!");
-            s = new Stack();
-            gibAus();
+        //Queue rekonstruieren (und Hilfsschlange leeren)
+        while (!q2.isEmpty()){
+            q.enqueue(q2.front());
+            q2.dequeue();
         }
     }
 }
