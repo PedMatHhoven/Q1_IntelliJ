@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="428.0" prefWidth="232.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_03_DynDs.Queue.Controller">
+<AnchorPane prefHeight="428.0" prefWidth="232.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_03_DynDs.Queue.mitGUI.Controller">
    <children>
       <Button fx:id="btQueue" layoutX="35.0" layoutY="29.0" mnemonicParsing="false" onAction="#btQueue_click" prefHeight="30.0" prefWidth="74.0" text="Queue" />
       <Button fx:id="btIsEmpty" disable="true" layoutX="35.0" layoutY="70.0" mnemonicParsing="false" onAction="#btIsEmpty_click" prefHeight="30.0" prefWidth="74.0" text="isEmpty" />

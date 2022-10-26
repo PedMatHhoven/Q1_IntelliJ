@@ -1,4 +1,4 @@
-package _03_DynDs.Queue;
+package _03_DynDs.Queue.mitGUI;
 
 public class Queue<ContentType> {
 	private class QueueNode {

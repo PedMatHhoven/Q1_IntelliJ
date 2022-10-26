@@ -1,4 +1,4 @@
-package _03_DynDs.Queue;
+package _03_DynDs.Queue.mitGUI;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

@@ -1,6 +1,5 @@
-package _03_DynDs.Queue;
+package _03_DynDs.Queue.mitGUI;
 
-import _03_DynDs.Stack.mitGUIundKlammern.Stack;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
