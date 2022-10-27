@@ -1,6 +1,6 @@
 package _01_Wiederholung_EF.Meins.Ablage1;
 
-import _03_DynDs.Stack.mitGUIundUPN.Stack;
+import _03_DynDs.Stack.mitUPN.Stack;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
