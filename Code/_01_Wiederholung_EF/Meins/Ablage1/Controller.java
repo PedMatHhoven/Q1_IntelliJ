@@ -46,17 +46,16 @@ public class Controller {
     }
 
     public void btUPN_click() {
-        //Berechnung eines (korrekt eingegebenen) UPN-Terms (mit Leerstellen, auch am Ende!)
-        //zum Schluss steht das Ergebnis auf dem Stack!
+        //Berechnung eines (korrekt eingegebenen) Integer-UPN-Terms
+        //(mit Leerstellen, auch am Ende!) zum Schluss steht das Ergebnis auf dem Stack!
         String t = tfUPN.getText();
-        int a=0, b=0, pos=0;
         //suche erste Leerstelle (Trenn-Markierung)
-        pos = t.indexOf(" ");
+        int pos = t.indexOf(" ");
         //Auswertung aller Fälle - bei Operator Rechnung, bei Zahl push
         switch (t.charAt(0)) {
             case '+','-','*','/':
-                b = Integer.parseInt(s.top()); s.pop();
-                a = Integer.parseInt(s.top()); s.pop();
+                int b = Integer.parseInt(s.top()); s.pop();
+                int a = Integer.parseInt(s.top()); s.pop();
                 switch(t.charAt(0)) {
                     case '+': s.push(String.valueOf(a + b)); break;
                     case '-': s.push(String.valueOf(a - b)); break;
