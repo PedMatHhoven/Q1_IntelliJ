@@ -1,4 +1,4 @@
-package _03_DynDs.Stack.mitGUIundUPN_nochNurKopie;
+package _01_Wiederholung_EF.Meins.Ablage2;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +15,6 @@ public class Main extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         pStage.setScene(scene);
         pStage.show();
-        pStage.setTitle("Stack & Co.");
+        pStage.setTitle("Queue");
     }
 }

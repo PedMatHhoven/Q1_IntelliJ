@@ -1,5 +1,6 @@
-package _03_DynDs.Queue.mitGUI;
+package _01_Wiederholung_EF.Meins.Ablage2;
 
+import _03_DynDs.Queue.mitGUI.Queue;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
