@@ -1,4 +1,4 @@
-package _01_Wiederholung_EF.Meins.Ablage1;
+package _03_DynDs.List;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +15,6 @@ public class Main extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         pStage.setScene(scene);
         pStage.show();
-        pStage.setTitle("UPN");
+        pStage.setTitle("Queue");
     }
 }

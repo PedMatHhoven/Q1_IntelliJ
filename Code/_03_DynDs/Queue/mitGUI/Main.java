@@ -1,4 +1,4 @@
-package _01_Wiederholung_EF.Meins.Ablage2;
+package _03_DynDs.Queue.mitGUI;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
