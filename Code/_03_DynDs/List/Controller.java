@@ -24,6 +24,7 @@ public class Controller {
     @FXML private Button btInsert;
     @FXML private Button btConcat;
     @FXML private Button btRemove;
+    @FXML private Button btPrevious;
 
     private List<String> l;
 
@@ -41,6 +42,7 @@ public class Controller {
         btInsert.setDisable(false);
         btConcat.setDisable(false);
         btRemove.setDisable(false);
+        btPrevious.setDisable(false);
     }
 
     public void btIsEmpty_click() {
@@ -48,7 +50,7 @@ public class Controller {
     }
 
     public void btHasAccess_click() {
-        if (l.hasAccess()) tfHasAccess.setText("ja - akt.!"); else tfHasAccess.setText("kein akt.");
+        if (l.hasAccess()) tfHasAccess.setText("ja - current!"); else tfHasAccess.setText("kein current!");
     }
 
     public void btNext_click() {
@@ -86,8 +88,9 @@ public class Controller {
     }
 
     public void btConcat_click() {
-        //neue Liste l2 aufbauen!?
-        l.concat(l);
+        List <String> l2 = new List <String> ();
+        l2.append("1"); l2.append("2"); l2.append("3");
+        l.concat(l2);
         gibAus();
     }
 
@@ -96,25 +99,25 @@ public class Controller {
         gibAus();
     }
 
+    public void btPrevious_click() {
+        l.current = l.getPrevious(l.current);
+        gibAus();
+    }
+
     public void gibAus() {
-        //Ausgabe über Hilfsliste
+        //Hilfsliste l2 - nur für Zwischenspeicherung current!
         List <String> l2 = new List <String> ();
-        List <String> l3 = new List <String> ();
-        l3.current = l.current;
+        l2.current = l.current;
         lv.getItems().clear();
-        while (!l.isEmpty()){
-            //vorderstes Element ausgeben + zwischenspeichern auf Hilfsliste + löschen
-            l.toFirst();
-            lv.getItems().add(l.getContent());
-            l2.append(l.getContent());
-            l.remove();
+        l.toFirst();
+        while (l.hasAccess()) {
+            if (l.current == l2.current) {
+                lv.getItems().add(l.getContent() + " - current!");
+            } else {
+                lv.getItems().add(l.getContent());
+            }
+            l.next();
         }
-        //List rekonstruieren (und Hilfsliste leeren)
-        while (!l2.isEmpty()){
-            l2.toFirst();
-            l.append(l2.getContent());
-            l2.remove();
-        }
-        l.current = l3.current;
+        l.current = l2.current;
     }
 }

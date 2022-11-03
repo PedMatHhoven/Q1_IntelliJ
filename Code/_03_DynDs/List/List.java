@@ -149,7 +149,8 @@ public class List<ContentType> {
 
     //Zusatz-Methode - nicht in Dokumentation enthalten,
     //aber sehr hilfreich für andere Methoden
-    private ListNode getPrevious(ListNode pNode) {
+    //geändert in protected wegen GUI!
+    protected ListNode getPrevious(ListNode pNode) {
         if (pNode != null && pNode != first && !this.isEmpty()) {
             ListNode temp = first;
             while (temp != null && temp.getNextNode() != pNode) {
