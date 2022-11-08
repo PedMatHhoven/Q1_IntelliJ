@@ -1,4 +1,4 @@
-package _03_DynDs.Queue.mitAnwendung;
+package _03_DynDs.Queue.mitWartezimmer;
 
 public class AP_Queue<ContentType> {
     private class QueueNode {
