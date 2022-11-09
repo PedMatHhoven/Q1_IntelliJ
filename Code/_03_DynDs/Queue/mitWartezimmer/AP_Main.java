@@ -1,4 +1,4 @@
-package _03_DynDs.Queue.mitAnwendung;
+package _03_DynDs.Queue.mitWartezimmer;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
