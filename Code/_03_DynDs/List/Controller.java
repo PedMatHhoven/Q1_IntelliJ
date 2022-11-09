@@ -25,7 +25,7 @@ public class Controller {
     @FXML private Button btConcat;
     @FXML private Button btRemove;
 
-    private List<String> l;
+    private List <String> l;
 
     public void btList_click() {
         l = new List<String>();
