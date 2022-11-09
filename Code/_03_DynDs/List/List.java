@@ -120,6 +120,7 @@ public class List<ContentType> {
                 this.last.setNextNode(pList.first);
                 this.last = pList.last;
             }
+            //pList wird gelöscht (nicht in Dokumentation gefordert)
             pList.first = null;
             pList.last = null;
             pList.current = null;
@@ -132,12 +133,13 @@ public class List<ContentType> {
                 first = first.getNextNode();
             } else {
                ListNode previous = this.getPrevious(current);
-                if (current == last) {
-                    last = previous;
-                }
-                previous.setNextNode(current.getNextNode());
+               if (current == last) {
+                   last = previous;
+               }
+               previous.setNextNode(current.getNextNode());
             }
             ListNode temp = current.getNextNode();
+            //Element wird gelöscht (nicht in Dokumentation gefordert)
             current.setContentObject(null);
             current.setNextNode(null);
             current = temp;
@@ -149,7 +151,8 @@ public class List<ContentType> {
 
     //Zusatz-Methode - nicht in Dokumentation enthalten,
     //aber sehr hilfreich für andere Methoden
-    private ListNode getPrevious(ListNode pNode) {
+    //geändert in protected wegen GUI!
+    protected ListNode getPrevious(ListNode pNode) {
         if (pNode != null && pNode != first && !this.isEmpty()) {
             ListNode temp = first;
             while (temp != null && temp.getNextNode() != pNode) {
