@@ -14,6 +14,7 @@ public class Controller {
     @FXML private TextField tfInsert;
     @FXML private TextField tfCount;
     @FXML private TextField tfAverage;
+    @FXML private TextField tfSearch;
     @FXML private ListView lv;
     @FXML private Button btIsEmpty;
     @FXML private Button btHasAccess;
@@ -32,6 +33,9 @@ public class Controller {
     @FXML private Button btTauscheRechts;
     @FXML private Button btToMax;
     @FXML private Button btAverage;
+    @FXML private Button btSearchLin;
+    @FXML private Button btSearchBin;
+    @FXML private Button btSort;
 
     //damit auch erweiterte Methoden abrufbar!
     private ListInt l;
@@ -56,6 +60,9 @@ public class Controller {
         btTauscheRechts.setDisable(false);
         btToMax.setDisable(false);
         btAverage.setDisable(false);
+        btSearchLin.setDisable(false);
+        btSearchBin.setDisable(false);
+        btSort.setDisable(false);
     }
 
     public void btIsEmpty_click() {
@@ -138,6 +145,21 @@ public class Controller {
 
     public void btAverage_click() {
         tfAverage.setText(String.valueOf(l.average()));
+        gibAus();
+    }
+
+    public void btSearchLin_click() {
+        l.searchLin(Integer.parseInt(tfSearch.getText()));
+        gibAus();
+    }
+
+    public void btSearchBin_click() {
+        l.searchBin(Integer.parseInt(tfSearch.getText()));
+        gibAus();
+    }
+
+    public void btSort_click() {
+        l.sort();
         gibAus();
     }
 

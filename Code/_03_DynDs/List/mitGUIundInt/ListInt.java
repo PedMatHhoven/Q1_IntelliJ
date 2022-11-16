@@ -29,4 +29,16 @@ public class ListInt extends ListErw <Integer> {
         }
         return erg;
     }
+
+    public void searchLin(int x) {
+
+    }
+
+    public void searchBin(int x) {
+
+    }
+
+    public void sort() {
+
+    }
 }
