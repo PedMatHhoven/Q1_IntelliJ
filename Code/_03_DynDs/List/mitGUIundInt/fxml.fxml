@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="548.0" prefWidth="474.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_03_DynDs.List.mitGUIundInt.Controller">
+   <children>
+      <Button fx:id="btListInt" layoutX="35.0" layoutY="29.0" mnemonicParsing="false" onAction="#btListInt_click" prefHeight="30.0" prefWidth="80.0" text="ListInt" />
+      <Button fx:id="btIsEmpty" disable="true" layoutX="35.0" layoutY="70.0" mnemonicParsing="false" onAction="#btIsEmpty_click" prefHeight="30.0" prefWidth="80.0" text="isEmpty" />
+      <Button fx:id="btHasAccess" disable="true" layoutX="35.0" layoutY="112.0" mnemonicParsing="false" onAction="#btHasAccess_click" prefHeight="30.0" prefWidth="80.0" text="hasAccess" />
+      <Button fx:id="btNext" disable="true" layoutX="35.0" layoutY="154.0" mnemonicParsing="false" onAction="#btNext_click" prefHeight="30.0" prefWidth="80.0" text="next" />
+      <Button fx:id="btToFirst" disable="true" layoutX="35.0" layoutY="195.0" mnemonicParsing="false" onAction="#btToFirst_click" prefHeight="30.0" prefWidth="80.0" text="toFirst" />
+      <TextField fx:id="tfHasAccess" layoutX="132.0" layoutY="116.0" prefHeight="25.0" prefWidth="91.0" />
+      <TextField fx:id="tfIsEmpty" layoutX="132.0" layoutY="74.0" prefHeight="25.0" prefWidth="91.0" />
+      <TextField fx:id="tfGetContent" layoutX="132.0" layoutY="281.0" prefHeight="25.0" prefWidth="91.0" />
+      <ListView fx:id="lv" layoutX="245.0" layoutY="154.0" prefHeight="277.0" prefWidth="91.0" />
+      <Button fx:id="btToLast" disable="true" layoutX="35.0" layoutY="237.0" mnemonicParsing="false" onAction="#btToLast_click" prefHeight="30.0" prefWidth="80.0" text="toLast" />
+      <Button fx:id="btGetContent" disable="true" layoutX="35.0" layoutY="277.0" mnemonicParsing="false" onAction="#btGetContent_click" prefHeight="30.0" prefWidth="80.0" text="getContent" />
+      <Button fx:id="btSetContent" disable="true" layoutX="35.0" layoutY="318.0" mnemonicParsing="false" onAction="#btSetContent_click" prefHeight="30.0" prefWidth="80.0" text="setContent" />
+      <Button fx:id="btAppend" disable="true" layoutX="35.0" layoutY="360.0" mnemonicParsing="false" onAction="#btAppend_click" prefHeight="30.0" prefWidth="80.0" text="append" />
+      <Button fx:id="btInsert" disable="true" layoutX="35.0" layoutY="402.0" mnemonicParsing="false" onAction="#btInsert_click" prefHeight="30.0" prefWidth="80.0" text="insert" />
+      <Button fx:id="btConcat" disable="true" layoutX="35.0" layoutY="443.0" mnemonicParsing="false" onAction="#btConcat_click" prefHeight="30.0" prefWidth="80.0" text="concat" />
+      <Button fx:id="btRemove" disable="true" layoutX="35.0" layoutY="485.0" mnemonicParsing="false" onAction="#btRemove_click" prefHeight="30.0" prefWidth="80.0" text="remove" />
+      <TextField fx:id="tfSetContent" layoutX="132.0" layoutY="322.0" prefHeight="25.0" prefWidth="91.0" />
+      <TextField fx:id="tfAppend" layoutX="132.0" layoutY="364.0" prefHeight="25.0" prefWidth="91.0" />
+      <TextField fx:id="tfInsert" layoutX="132.0" layoutY="406.0" prefHeight="25.0" prefWidth="91.0" />
+      <Button fx:id="btPrevious" disable="true" layoutX="138.0" layoutY="154.0" mnemonicParsing="false" onAction="#btPrevious_click" prefHeight="30.0" prefWidth="80.0" text="previous" />
+      <Button fx:id="btCount" disable="true" layoutX="143.0" layoutY="443.0" mnemonicParsing="false" onAction="#btCount_click" prefHeight="30.0" prefWidth="80.0" text="count" />
+      <Button fx:id="btDreheUm" disable="true" layoutX="143.0" layoutY="485.0" mnemonicParsing="false" onAction="#btDreheUm_click" prefHeight="30.0" prefWidth="80.0" text="dreheUm" />
+      <Button fx:id="btTauscheRechts" disable="true" layoutX="250.0" layoutY="485.0" mnemonicParsing="false" onAction="#btTauscheRechts_click" prefHeight="30.0" prefWidth="80.0" text="tauscheRe" />
+      <TextField fx:id="tfCount" layoutX="244.0" layoutY="446.0" prefHeight="25.0" prefWidth="91.0" />
+      <Button fx:id="btToMax" disable="true" layoutX="250.0" layoutY="70.0" mnemonicParsing="false" onAction="#btToMax_click" prefHeight="30.0" prefWidth="80.0" text="toMax" />
+      <Button fx:id="btAverage" disable="true" layoutX="250.0" layoutY="112.0" mnemonicParsing="false" onAction="#btAverage_click" prefHeight="30.0" prefWidth="80.0" text="average" />
+      <TextField fx:id="tfAverage" layoutX="355.0" layoutY="116.0" prefHeight="25.0" prefWidth="91.0" />
+   </children>
+</AnchorPane>
