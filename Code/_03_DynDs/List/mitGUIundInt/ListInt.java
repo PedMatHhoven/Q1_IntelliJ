@@ -1,7 +1,7 @@
 package _03_DynDs.List.mitGUIundInt;
 
 public class ListInt extends ListErw <Integer> {
-    public void toMax() { //AT 2
+    public void toMax() {
         if (!isEmpty()) {
             ListNode help = first;
             toFirst(); next();
@@ -15,7 +15,7 @@ public class ListInt extends ListErw <Integer> {
         }
     }
 
-    public double average() { //AT 1
+    public double average() {
         double erg = 0;
         if (!isEmpty()) {
             ListNode help = current; //zwischenspeichern

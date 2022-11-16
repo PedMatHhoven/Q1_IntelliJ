@@ -135,7 +135,8 @@ public class List <ContentType> {
         }
     }
 
-    //Zusatz - nicht in Dokumentation, aber hilfreich für andere Methoden!
+    //Zusatz-Methode - nicht in Dokumentation enthalten,
+    //aber sehr hilfreich für andere Methoden!
     //geändert in protected wegen GUI!
     protected ListNode getPrevious(ListNode pNode) {
         if (pNode != null && pNode != first && !isEmpty()) {

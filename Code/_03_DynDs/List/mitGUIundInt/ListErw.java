@@ -15,7 +15,7 @@ public class ListErw <ContentType> extends List <ContentType> {
         return i;
     }
 
-    public void dreheUm() { //AT 1
+    public void dreheUm() {
         if (first != last) {
             ListNode help1 = last;
             while (help1 != first){
@@ -29,7 +29,7 @@ public class ListErw <ContentType> extends List <ContentType> {
         }
     }
 
-    public void tauscheRechts() { //AT 2
+    public void tauscheRechts() {
         if (hasAccess() && !(current == last)) {
             ListNode help = current.getNextNode(); //current vor help
             current.setNextNode(help.getNextNode());
