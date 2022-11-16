@@ -1,6 +1,6 @@
 package _03_DynDs.Queue.mitWartezimmer;
 
-public class AP_Queue<ContentType> {
+public class AP_Queue <ContentType> {
     private class QueueNode {
         private ContentType content = null;
         private QueueNode nextNode = null;

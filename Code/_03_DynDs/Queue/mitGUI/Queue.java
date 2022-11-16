@@ -1,6 +1,6 @@
 package _03_DynDs.Queue.mitGUI;
 
-public class Queue<ContentType> {
+public class Queue <ContentType> {
 	private class QueueNode {
 		private ContentType content = null;
 		private QueueNode nextNode = null;

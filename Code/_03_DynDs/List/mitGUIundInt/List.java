@@ -1,6 +1,6 @@
 package _03_DynDs.List.mitGUIundInt;
 
-public class List <ContentType> {
+public class List<ContentType> {
     //in protected geändert wegen ListErw - Zugriff erforderlich
     protected class ListNode {
         private ContentType contentObject;

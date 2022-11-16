@@ -1,6 +1,5 @@
 package _03_DynDs.Queue.mitGUI;
 
-import _03_DynDs.Queue.mitGUI.Queue;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
@@ -16,10 +15,10 @@ public class Controller {
     @FXML private Button btDequeue;
     @FXML private Button btFront;
 
-    private Queue<String> q;
+    private Queue <String> q;
 
     public void btQueue_click() {
-        q = new Queue<String>();
+        q = new Queue <String>();
         gibAus();
         btIsEmpty.setDisable(false);
         btEnqueue.setDisable(false);

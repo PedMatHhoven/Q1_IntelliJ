@@ -18,7 +18,7 @@ public class ListErw <ContentType> extends List <ContentType> {
     public void dreheUm() {
         if (first != last) {
             ListNode help1 = last;
-            while (help1 != first){
+            while (help1 != first) {
                 ListNode help2 = help1;
                 help1 = getPrevious(help1); //help1 vor help2
                 help2.setNextNode(help1);

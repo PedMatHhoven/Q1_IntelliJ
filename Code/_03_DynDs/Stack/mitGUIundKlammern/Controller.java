@@ -19,7 +19,7 @@ public class Controller {
     @FXML private Button btKlammern;
     @FXML private Button btKopie;
 
-    private Stack<String> s;
+    private Stack <String> s;
 
     public void btStack_click() {
         s = new Stack <String> ();

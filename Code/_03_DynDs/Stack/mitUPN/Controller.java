@@ -1,6 +1,5 @@
 package _03_DynDs.Stack.mitUPN;
 
-import _03_DynDs.Stack.mitUPN.Stack;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
@@ -13,10 +12,10 @@ public class Controller {
     @FXML private Button btUPN;
     @FXML private Button btKopie;
 
-    private Stack<String> s;
+    private Stack <String> s;
 
     public void btStack_click() {
-        s = new Stack<String>();
+        s = new Stack <String>();
         gibAus();
         btUPN.setDisable(false);
         tfUPN.setDisable(false);
