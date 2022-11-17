@@ -109,7 +109,7 @@ public class Controller {
 
     public void btConcat_click() {
         ListInt l2 = new ListInt();
-        l2.append(1); l2.append(2); l2.append(3);
+        for (int i=0; i<10; i++) l2.append(2*i+3);
         l.concat(l2);
         gibAus();
     }
