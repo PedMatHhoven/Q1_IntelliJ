@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Treppen {
   static int count = 0;
 
-  public static String treppen(int a, String s)  {
+  public static String treppen(int a, String s) {
     if (a==0) {
       count++;
       return s + "\n";
@@ -19,7 +19,7 @@ public class Treppen {
     }
   }
 
-  public static int treppenAnzahl(int a)  {
+  public static int treppenAnzahl(int a) {
     if (a<=1) return 1; else return treppenAnzahl(a-1) + treppenAnzahl(a-2);
   }
 
