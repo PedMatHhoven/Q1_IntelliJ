@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="316.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_04_Rekursion.UebungsMixMitGUI.Controller">
+   <children>
+      <Button fx:id="btFakultaetRek" layoutX="33.0" layoutY="29.0" mnemonicParsing="false" onAction="#btFakultaetRek_onClick" prefHeight="33.0" prefWidth="111.0" text="Fakultät rek." />
+      <Button fx:id="btSummeBisRek" layoutX="33.0" layoutY="74.0" mnemonicParsing="false" onAction="#btSummeBisRek_onClick" prefHeight="33.0" prefWidth="111.0" text="SummeBis rek." />
+      <Button fx:id="btSpiegelwortRek" layoutX="33.0" layoutY="119.0" mnemonicParsing="false" onAction="#btSpiegelwortRek_onClick" prefHeight="33.0" prefWidth="111.0" text="Spiegelwort rek." />
+      <Button fx:id="btQuersummeRek" layoutX="33.0" layoutY="166.0" mnemonicParsing="false" onAction="#btQuersummeRek_onClick" prefHeight="33.0" prefWidth="111.0" text="Quersumme rek." />
+      <Button fx:id="btLineareSucheRek" layoutX="33.0" layoutY="211.0" mnemonicParsing="false" onAction="#btLineareSucheRek_onClick" prefHeight="33.0" prefWidth="111.0" text="LineareSuche rek." />
+      <Button fx:id="btggTRek" layoutX="33.0" layoutY="256.0" mnemonicParsing="false" onAction="#btggTRek_onClick" prefHeight="33.0" prefWidth="111.0" text="ggT rek." />
+      <Button fx:id="btFakultaetIt" layoutX="325.0" layoutY="28.0" mnemonicParsing="false" onAction="#btFakultaetIt_onClick" prefHeight="33.0" prefWidth="111.0" text="Fakultät it." />
+      <Button fx:id="btSummeBisIt" layoutX="325.0" layoutY="73.0" mnemonicParsing="false" onAction="#btSummeBisIt_onClick" prefHeight="33.0" prefWidth="111.0" text="SummeBis it." />
+      <Button fx:id="btSpiegelwortIt" layoutX="325.0" layoutY="118.0" mnemonicParsing="false" onAction="#btSpiegelwortIt_onClick" prefHeight="33.0" prefWidth="111.0" text="Spiegelwort it." />
+      <Button fx:id="btQuersummeIt" layoutX="325.0" layoutY="165.0" mnemonicParsing="false" onAction="#btQuersummeIt_onClick" prefHeight="33.0" prefWidth="111.0" text="Quersumme it." />
+      <Button fx:id="btLineareSucheIt" layoutX="325.0" layoutY="210.0" mnemonicParsing="false" onAction="#btLineareSucheIt_onClick" prefHeight="33.0" prefWidth="111.0" text="LineareSuche it." />
+      <Button fx:id="btggTIt" layoutX="325.0" layoutY="255.0" mnemonicParsing="false" onAction="#btggTIt_onClick" prefHeight="33.0" prefWidth="111.0" text="ggT it." />
+      <TextField fx:id="tfFakultaetRek" layoutX="159.0" layoutY="33.0" prefHeight="25.0" prefWidth="58.0" />
+      <TextField fx:id="tfSummeBisRek" layoutX="159.0" layoutY="78.0" prefHeight="25.0" prefWidth="58.0" />
+      <TextField fx:id="tfSpiegelwortRek" layoutX="159.0" layoutY="123.0" prefHeight="25.0" prefWidth="58.0" />
+      <TextField fx:id="tfQuersummeRek" layoutX="159.0" layoutY="170.0" prefHeight="25.0" prefWidth="58.0" />
+      <TextField fx:id="tfLineareSucheRek" layoutX="159.0" layoutY="215.0" prefHeight="25.0" prefWidth="58.0" />
+      <TextField fx:id="tfggTRek1" layoutX="159.0" layoutY="260.0" prefHeight="25.0" prefWidth="40.0" />
+      <TextField fx:id="tfFakultaetIt" layoutX="454.0" layoutY="32.0" prefHeight="25.0" prefWidth="58.0" />
+      <TextField fx:id="tfSummeBisIt" layoutX="454.0" layoutY="77.0" prefHeight="25.0" prefWidth="58.0" />
+      <TextField fx:id="tfSpiegelwortIt" layoutX="454.0" layoutY="122.0" prefHeight="25.0" prefWidth="58.0" />
+      <TextField fx:id="tfQuersummeIt" layoutX="454.0" layoutY="169.0" prefHeight="25.0" prefWidth="58.0" />
+      <TextField fx:id="tfLineareSucheIt" layoutX="454.0" layoutY="214.0" prefHeight="25.0" prefWidth="58.0" />
+      <TextField fx:id="tfggTIt1" layoutX="454.0" layoutY="259.0" prefHeight="25.0" prefWidth="40.0" />
+      <Label fx:id="lbFakultaetRek" layoutX="233.0" layoutY="36.0" prefHeight="17.0" prefWidth="40.0" />
+      <Label fx:id="lbSummeBisRek" layoutX="233.0" layoutY="82.0" prefHeight="17.0" prefWidth="40.0" />
+      <Label fx:id="lbSpiegelwortRek" layoutX="233.0" layoutY="127.0" prefHeight="17.0" prefWidth="40.0" />
+      <Label fx:id="lbQuersummeRek" layoutX="233.0" layoutY="174.0" prefHeight="17.0" prefWidth="40.0" />
+      <Label fx:id="lbLineareSucheRek" layoutX="233.0" layoutY="219.0" prefHeight="17.0" prefWidth="40.0" />
+      <Label fx:id="lbggTRek" layoutX="255.0" layoutY="264.0" prefHeight="17.0" prefWidth="40.0" />
+      <Label fx:id="lbFakultaetIt" layoutX="527.0" layoutY="36.0" prefHeight="17.0" prefWidth="40.0" />
+      <Label fx:id="lbSummeBisIt" layoutX="527.0" layoutY="81.0" prefHeight="17.0" prefWidth="40.0" />
+      <Label fx:id="lbSpiegelwortIt" layoutX="527.0" layoutY="126.0" prefHeight="17.0" prefWidth="40.0" />
+      <Label fx:id="lbQuersummeIt" layoutX="527.0" layoutY="173.0" prefHeight="17.0" prefWidth="40.0" />
+      <Label fx:id="lbLineareSucheIt" layoutX="527.0" layoutY="218.0" prefHeight="17.0" prefWidth="40.0" />
+      <Label fx:id="lbggTIt" layoutX="550.0" layoutY="263.0" prefHeight="17.0" prefWidth="40.0" />
+      <TextField fx:id="tfggTRek2" layoutX="206.0" layoutY="260.0" prefHeight="25.0" prefWidth="40.0" />
+      <TextField fx:id="tfggTIt2" layoutX="500.0" layoutY="259.0" prefHeight="25.0" prefWidth="40.0" />
+   </children>
+</AnchorPane>

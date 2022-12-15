@@ -14,7 +14,7 @@ public class Kurzueberblick_EF {
         //Kurzform! - Eigentlich String s = new String("Hallo :)!"),
         //denn String ist eine Klasse, kein einfacher Datentyp, d.h.
         //eine Variable vom Typ String enthält einen Verweis auf ein Objekt der Klasse String!
-        //Wichtigste Konsequenz - Vergleichs­operator == nicht perfekt, stattdessen Funktion "equals"!
+        //Wichtigste Konsequenz - Vergleichsoperator == nicht perfekt, stattdessen Funktion "equals"!
         //Beispiele weiterer Methoden der Klasse String: int length(); String substring(int i, int j); …
 
         //Ausgaben/ Initialisierungen
