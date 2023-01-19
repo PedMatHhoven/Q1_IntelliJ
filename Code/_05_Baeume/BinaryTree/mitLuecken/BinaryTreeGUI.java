@@ -1,10 +1,8 @@
 package _05_Baeume.BinaryTree.mitLuecken;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
+import java.lang.String;
 import java.util.Random;
 
 public class BinaryTreeGUI extends Frame {
@@ -35,8 +33,8 @@ public class BinaryTreeGUI extends Frame {
   private TextField tfAnzahl = new TextField();
   private TextField tfHoehe = new TextField();
   private MyPanel cp = new MyPanel();
-  private BinaryTree Baum = new BinaryTree();
-  private BinaryTree Baum1, Baum2, Baum3;
+  private BinaryTree Baum = new BinaryTree(); //"rohe" Nutzung der generischen Klasse; nicht perfekt, aber so mehrere
+  private BinaryTree Baum1, Baum2; //ContentTypes machbar - automatisch ermittelt - und Schreibersparnis!
   private String Term;
   // Ende Attribute
   
@@ -58,8 +56,8 @@ public class BinaryTreeGUI extends Frame {
     // Anfang Komponenten
     btTerm.setBounds(120, 8, 123, 25);
     btTerm.setLabel("Bsp-Termbaum");
-    btTerm.addActionListener(new ActionListener() { 
-      public void actionPerformed(ActionEvent evt) { 
+    btTerm.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
         btTerm_ActionPerformed(evt);
       }
     });
@@ -222,34 +220,22 @@ public class BinaryTreeGUI extends Frame {
   
   // Anfang Methoden
   public void btTerm_ActionPerformed(ActionEvent evt) {
-    /*Baum1 = new Termbaum(new String("5"));
-    Baum2 = new Termbaum(new String("11"));
-    Baum2 = new Termbaum(new String("*"), Baum1, Baum2);
-    Baum1 = new Termbaum(new String("18"));
-    Baum3 = new Termbaum(new String("12"));
-    Baum3 = new Termbaum(new String("/"), Baum1, Baum3);
-    Baum = new Termbaum(new String("-"), Baum2, Baum3);
-    Baum1 = new Termbaum(new String("4"));
-    Baum2 = new Termbaum(new String("7"));
-    Baum2 = new Termbaum(new String("+"), Baum1, Baum2);
-    Baum = new Termbaum(new String("*"), Baum, Baum2);
-    cp.repaint();*/
+    /* Baum1 = new Termbaum("*", new Termbaum("5"), new Termbaum("11"));
+    Baum2 = new Termbaum("/", new Termbaum("18"), new Termbaum("12"));
+    Baum = new Termbaum("-", Baum1, Baum2);
+    Baum1 = new Termbaum("+", new Termbaum("4"), new Termbaum("7"));
+    Baum = new Termbaum("*", Baum, Baum1);
+    cp.repaint(); */
   } 
   
   public void btSuch_ActionPerformed(ActionEvent evt) {
-    Baum1 = new BinaryTree(3);
-    Baum2 = new BinaryTree(8);
-    Baum2 = new BinaryTree(9, Baum2, new BinaryTree());
-    Baum3 = new BinaryTree(13);
-    Baum3 = new BinaryTree(12, Baum2, Baum3);
-    Baum = new BinaryTree(7, Baum1, Baum3);
-    Baum1 = new BinaryTree(22);
-    Baum2 = new BinaryTree(25);
-    Baum3 = new BinaryTree(23, Baum1, Baum2);
-    Baum1 = new BinaryTree(31);
-    Baum2 = new BinaryTree(41, Baum1, new BinaryTree());
-    Baum3 = new BinaryTree(27, Baum3, Baum2);
-    Baum = new BinaryTree(15, Baum, Baum3);
+    Baum = new BinaryTree(9, new BinaryTree(8), new BinaryTree());
+    Baum = new BinaryTree(12, Baum, new BinaryTree(13));
+    Baum = new BinaryTree(7, new BinaryTree(3), Baum);
+    Baum1 = new BinaryTree(23, new BinaryTree(22), new BinaryTree(25));
+    Baum2 = new BinaryTree(41, new BinaryTree(31), new BinaryTree());
+    Baum1 = new BinaryTree(27, Baum1, Baum2);
+    Baum = new BinaryTree(15, Baum, Baum1);
     cp.repaint();
   } 
   
@@ -259,17 +245,11 @@ public class BinaryTreeGUI extends Frame {
       Random rand = new Random();
       a[i] = rand.nextInt(7)+7*i;
     }
-    Baum1 = new BinaryTree(a[0]);
-    Baum2 = new BinaryTree(a[2]);
-    Baum = new BinaryTree(a[1], Baum1, Baum2);
-    Baum1 = new BinaryTree(a[4]);
-    Baum2 = new BinaryTree();
-    Baum1 = new BinaryTree(a[5], Baum1, Baum2);
-    Baum2 = new BinaryTree(a[7]);
-    Baum3 = new BinaryTree(a[9]);
-    Baum3 = new BinaryTree(a[8], Baum2, Baum3);
-    Baum3 = new BinaryTree(a[6], Baum1, Baum3);
-    Baum = new BinaryTree(a[3], Baum, Baum3);
+    Baum = new BinaryTree(a[1], new BinaryTree(a[0]), new BinaryTree(a[2]));
+    Baum1 = new BinaryTree(a[5], new BinaryTree(a[4]), new BinaryTree());
+    Baum2 = new BinaryTree(a[8], new BinaryTree(a[7]), new BinaryTree(a[9]));
+    Baum2 = new BinaryTree(a[6], Baum1, Baum2);
+    Baum = new BinaryTree(a[3], Baum, Baum2);
     cp.repaint();
   }
   

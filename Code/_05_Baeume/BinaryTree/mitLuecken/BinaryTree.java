@@ -9,8 +9,8 @@ public class BinaryTree <ContentType> {
 
     public BTNode(ContentType pContent) {
       content = pContent;
-      left = new BinaryTree <ContentType> ();
-      right = new BinaryTree <ContentType>();
+      left = new BinaryTree <>();
+      right = new BinaryTree <>();
     }
   }
   //Ende innere Klasse
@@ -28,8 +28,8 @@ public class BinaryTree <ContentType> {
   public BinaryTree(ContentType pContent, BinaryTree <ContentType> pLeftTree, BinaryTree <ContentType> pRightTree) { //Konstruktor 3
     if (pContent != null) {
       node = new BTNode(pContent);
-      if (pLeftTree != null) node.left = pLeftTree; else node.left = new BinaryTree <ContentType>();
-      if (pRightTree != null) node.right = pRightTree; else node.right = new BinaryTree <ContentType>();
+      if (pLeftTree != null) node.left = pLeftTree; else node.left = new BinaryTree <>();
+      if (pRightTree != null) node.right = pRightTree; else node.right = new BinaryTree <>();
     } else node = null;
   }
 
@@ -97,21 +97,14 @@ public class BinaryTree <ContentType> {
 
   public String levelorder(){
     String s = "";
-    for (int i=1; i<=height(); i++) {
-      s = s + giveLevel(this.node, i);
-    }
+    for (int i=1; i<=height(); i++) s = s + giveLevel(this.node, i);
     return s;
   }
   
   public String giveLevel(BTNode root, int level){
-    if(isEmpty()){
-      return "";
-    } else if(level == 1 && root != null) {
-      return root.content + " ";
-    } else if(level > 1){
-      return giveLevel(root.left.node, level-1) + giveLevel(root.right.node, level-1);    
-    }
-    return "";
+    if (root == null) return "";
+    else if (level == 1) return root.content + " ";
+    else return giveLevel(root.left.node, level - 1) + giveLevel(root.right.node, level - 1);
   }
   
   public int number() {
