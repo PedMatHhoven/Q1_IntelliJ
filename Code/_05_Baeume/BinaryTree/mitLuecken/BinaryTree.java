@@ -14,9 +14,9 @@ public class BinaryTree <ContentType> {
     }
   }
   //Ende innere Klasse
-  
+
   private BTNode node; //ein Baum besteht aus einer Wurzel (mit Teilbäumen - s.o.)
-  
+
   public BinaryTree() { //Konstruktor 1
     node = null;
   }
@@ -61,7 +61,7 @@ public class BinaryTree <ContentType> {
     return null; //für das Zeichnen vonnöten!
   }
   //Ende offizielle Abiturklasse
-  
+
   //sinnvolle Erweiterungen (für jeden Binärbaum!)
   public String inorder() {
     return "";
@@ -70,19 +70,21 @@ public class BinaryTree <ContentType> {
   public String preorder() {
     return "";
   }
-  
+
   public String postorder() {
     return "";
   }
 
-  /*public String levelorder() {
-  //mit Queue - unten eine Version ohne Queue (rekursiv mit 2 Methoden)
+ /*public String levelorderMitQueue() {
+  //unten eine Version ohne Queue (rekursiv mit 2 Methoden)
+  //untere ist kürzer, speichert aber durch Rekursion auch Zwischenwerte auf Stack!
+  //diese hier ist evtl. etwas intuitiver/ leichter nachzuvollziehen!
     String s;
-    Queue q = new Queue();
+    Queue <BinaryTree <ContentType>> q = new Queue <>();
     s = "";
     q.enqueue(this);
     while (!q.isEmpty()) {
-      BinaryTree tree = ((BinaryTree)q.front());
+      BinaryTree <ContentType> tree = q.front();
       s = s + tree.getContent() + " ";
       if (!tree.getLeftTree().isEmpty()) {
         q.enqueue(tree.getLeftTree());
@@ -97,20 +99,20 @@ public class BinaryTree <ContentType> {
 
   public String levelorder(){
     String s = "";
-    for (int i=1; i<=height(); i++) s = s + giveLevel(this.node, i);
+    for (int i=1; i<=height(); i++) s = s + giveLevel(i);
     return s;
   }
-  
-  public String giveLevel(BTNode root, int level){
-    if (root == null) return "";
-    else if (level == 1) return root.content + " ";
-    else return giveLevel(root.left.node, level - 1) + giveLevel(root.right.node, level - 1);
+
+  private String giveLevel(int level) {
+    if (isEmpty()) return "";
+    else if (level == 1) return getContent() + " ";
+    else return getLeftTree().giveLevel(level - 1) + getRightTree().giveLevel(level - 1);
   }
-  
+
   public int number() {
     return 0;
   }
-  
+
   public int height() {
     return 0;
   }
