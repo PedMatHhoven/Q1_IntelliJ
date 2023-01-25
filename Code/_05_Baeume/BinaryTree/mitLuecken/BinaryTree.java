@@ -38,11 +38,18 @@ public class BinaryTree <ContentType> {
   }
 
   public void setContent(ContentType pContent) {
-    //
+    if (pContent != null) {
+      if (isEmpty()) {
+        node = new BTNode(pContent);
+        node.left = new BinaryTree <>();
+        node.right = new BinaryTree <>();
+      }
+      node.content = pContent;
+    }
   }
 
   public ContentType getContent() {
-    return null;
+    if (isEmpty()) return null; else return node.content;
   }
 
   public void setLeftTree(BinaryTree <ContentType> pTree) {
@@ -50,29 +57,32 @@ public class BinaryTree <ContentType> {
   }
 
   public void setRightTree(BinaryTree <ContentType> pTree) {
-    //
+    if (!isEmpty() && pTree != null) node.right = pTree;
   }
 
   public BinaryTree <ContentType> getLeftTree() {
-    return null; //für das Zeichnen vonnöten!
+    if (!isEmpty()) return node.left; else return null;
   }
 
   public BinaryTree<ContentType> getRightTree() {
-    return null; //für das Zeichnen vonnöten!
+    if (!isEmpty()) return node.right; else return null;
   }
   //Ende offizielle Abiturklasse
 
   //sinnvolle Erweiterungen (für jeden Binärbaum!)
   public String inorder() {
-    return "";
+    if (!isEmpty()) return getLeftTree().inorder() + getContent() + " " + getRightTree().inorder();
+    else return "";
   }
 
   public String preorder() {
-    return "";
+    if (!isEmpty()) return getContent() + " " + getLeftTree().preorder() + getRightTree().preorder();
+    else return "";
   }
 
   public String postorder() {
-    return "";
+    if (!isEmpty()) return getLeftTree().postorder() + getRightTree().postorder() + getContent() + " ";
+    else return "";
   }
 
  /*public String levelorderMitQueue() {
