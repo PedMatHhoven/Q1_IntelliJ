@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="573.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_05_Baeume.BinaryTree.mitLuecken.Controller">
+   <children>
+      <Canvas fx:id="myCanvas" height="325.0" layoutX="29.0" layoutY="44.0" width="823.0" />
+      <Button fx:id="btBsp" layoutX="496.0" layoutY="44.0" mnemonicParsing="false" onAction="#btBsp_onClick" prefHeight="25.0" prefWidth="114.0" text="Bsp-Suchbaum" />
+      <Button fx:id="btZufall" layoutX="627.0" layoutY="44.0" mnemonicParsing="false" onAction="#btZufall_onClick" prefHeight="25.0" prefWidth="114.0" text="Zufalls-Suchbaum" />
+      <Button fx:id="btTerm" layoutX="137.0" layoutY="44.0" mnemonicParsing="false" onAction="#btTerm_onClick" prefHeight="25.0" prefWidth="114.0" text="Bsp-Termbaum" />
+      <Button fx:id="btInorder" layoutX="41.0" layoutY="384.0" mnemonicParsing="false" onAction="#btInorder_onClick" prefHeight="25.0" prefWidth="114.0" text="inorder" />
+      <Button fx:id="btInfix" layoutX="41.0" layoutY="417.0" mnemonicParsing="false" onAction="#btInfix_onClick" prefHeight="25.0" prefWidth="114.0" text="infix" />
+      <Button fx:id="btPreorder" layoutX="41.0" layoutY="450.0" mnemonicParsing="false" onAction="#btPreorder_onClick" prefHeight="25.0" prefWidth="114.0" text="preorder" />
+      <Button fx:id="btPostorder" layoutX="41.0" layoutY="482.0" mnemonicParsing="false" onAction="#btPostorder_onClick" prefHeight="25.0" prefWidth="114.0" text="postorder" />
+      <Button fx:id="btLevelorder" layoutX="41.0" layoutY="513.0" mnemonicParsing="false" onAction="#btLevelorder_onClick" prefHeight="25.0" prefWidth="114.0" text="levelorder" />
+      <Button fx:id="btAnzahl" layoutX="469.0" layoutY="384.0" mnemonicParsing="false" onAction="#btAnzahl_onClick" prefHeight="25.0" prefWidth="114.0" text="Anzahl" />
+      <Button fx:id="btErgebnis" layoutX="469.0" layoutY="417.0" mnemonicParsing="false" onAction="#btErgebnis_onClick" prefHeight="25.0" prefWidth="114.0" text="Ergebnis" />
+      <Button fx:id="btInfixBaum" layoutX="469.0" layoutY="450.0" mnemonicParsing="false" onAction="#btInfixBaum_onClick" prefHeight="25.0" prefWidth="114.0" text="Infix-Baum" />
+      <Button fx:id="btPraefixBaum" layoutX="469.0" layoutY="482.0" mnemonicParsing="false" onAction="#btPraefixBaum_onClick" prefHeight="25.0" prefWidth="114.0" text="Präfix-Baum" />
+      <Button fx:id="btPostfixBaum" layoutX="469.0" layoutY="513.0" mnemonicParsing="false" onAction="#btPostfixBaum_onClick" prefHeight="25.0" prefWidth="114.0" text="Postfix-Baum" />
+      <TextField fx:id="tfInorder" layoutX="167.0" layoutY="384.0" prefHeight="25.0" prefWidth="289.0" />
+      <TextField fx:id="tfInfix" layoutX="167.0" layoutY="417.0" prefHeight="25.0" prefWidth="289.0" />
+      <TextField fx:id="tfPreorder" layoutX="167.0" layoutY="450.0" prefHeight="25.0" prefWidth="289.0" />
+      <TextField fx:id="tfPostorder" layoutX="167.0" layoutY="482.0" prefHeight="25.0" prefWidth="289.0" />
+      <TextField fx:id="tfLevelorder" layoutX="167.0" layoutY="513.0" prefHeight="25.0" prefWidth="289.0" />
+      <Button fx:id="btHoehe" layoutX="728.0" layoutY="384.0" mnemonicParsing="false" onAction="#btHoehe_onClick" prefHeight="25.0" prefWidth="114.0" text="Höhe" />
+      <TextField fx:id="tfInfixBaum" layoutX="594.0" layoutY="450.0" prefHeight="25.0" prefWidth="250.0" />
+      <TextField fx:id="tfPraefixBaum" layoutX="594.0" layoutY="482.0" prefHeight="25.0" prefWidth="250.0" />
+      <TextField fx:id="tfPostfixBaum" layoutX="594.0" layoutY="513.0" prefHeight="25.0" prefWidth="250.0" />
+      <TextField fx:id="tfErgebnis" layoutX="594.0" layoutY="417.0" prefHeight="25.0" prefWidth="114.0" />
+      <TextField fx:id="tfHoehe" layoutX="728.0" layoutY="417.0" prefHeight="25.0" prefWidth="114.0" />
+      <TextField fx:id="tfAnzahl" layoutX="594.0" layoutY="384.0" prefHeight="25.0" prefWidth="114.0" />
+   </children>
+</AnchorPane>

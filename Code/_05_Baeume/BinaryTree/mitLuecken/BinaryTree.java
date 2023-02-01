@@ -85,31 +85,31 @@ public class BinaryTree <ContentType> {
     else return "";
   }
 
- /*public String levelorderMitQueue() {
+  public String levelorderMitQueue() {
   //unten eine Version ohne Queue (rekursiv mit 2 Methoden)
   //untere ist kürzer, speichert aber durch Rekursion auch Zwischenwerte auf Stack!
   //diese hier ist evtl. etwas intuitiver/ leichter nachzuvollziehen!
     String s;
     Queue <BinaryTree <ContentType>> q = new Queue <>();
     s = "";
-    q.enqueue(this);
+    q.enqueue(this); //kompletter Baum wird in die Schlange eingefügt
     while (!q.isEmpty()) {
       BinaryTree <ContentType> tree = q.front();
-      s = s + tree.getContent() + " ";
+      s = s + tree.getContent() + " "; //Wurzel des 1. Baums in der Schlange wird zum Ausgabestring hinzugefügt
       if (!tree.getLeftTree().isEmpty()) {
-        q.enqueue(tree.getLeftTree());
+        q.enqueue(tree.getLeftTree()); //linker Teilbaum wird an die Schlange angehangen (wenn nicht leer)
       }
       if (!tree.getRightTree().isEmpty()) {
-        q.enqueue(tree.getRightTree());
+        q.enqueue(tree.getRightTree()); //rechter Teilbaum wird an die Schlange angehangen (wenn nicht leer)
       }
-      q.dequeue();
+      q.dequeue(); //1. Element der Schlange wird gelöscht
     }
     return s;
-  } */
+  }
 
   public String levelorder(){
     String s = "";
-    for (int i=1; i<=height(); i++) s = s + giveLevel(i);
+    for (int i=1; i<=height(); i++) s = s + giveLevel(i); //alle Höhen werden nacheinander hinzugefügt
     return s;
   }
 
@@ -120,10 +120,10 @@ public class BinaryTree <ContentType> {
   }
 
   public int number() {
-    return 0;
+    return 0; //noch zu implementieren
   }
 
   public int height() {
-    return 0;
+    return 0; //noch zu implementieren
   }
 }
