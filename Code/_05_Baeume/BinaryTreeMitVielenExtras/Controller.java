@@ -92,9 +92,9 @@ public class Controller {
     }
 
     public Termbaum InfixZuTermbaum() {
-    //vielleicht mal mit Parameter Term im Prozedurkopf kurz probieren!?
-    //funktioniert nicht, wenn nur eine Zahl eingegeben wird
-    //wahrscheinlich in else-Teil abzufangen
+    //vielleicht mal mit Parameter Term im Prozedurkopf probieren!?
+    //funktioniert nicht, wenn nur eine Zahl eingegeben wird (nicht so wichtig, weil kein "richtiger" Term)
+    //alle (Teil-)Rechnungen müssen eingeklammert werden!
       int i,j,k,l,m,n;
       String t;
       Termbaum b;
