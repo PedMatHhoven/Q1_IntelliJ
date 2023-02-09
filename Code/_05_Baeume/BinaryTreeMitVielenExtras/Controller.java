@@ -93,6 +93,8 @@ public class Controller {
 
     public Termbaum InfixZuTermbaum() {
     //vielleicht mal mit Parameter Term im Prozedurkopf kurz probieren!?
+    //funktioniert nicht, wenn nur eine Zahl eingegeben wird
+    //wahrscheinlich in else-Teil abzufangen
       int i,j,k,l,m,n;
       String t;
       Termbaum b;
@@ -155,6 +157,7 @@ public class Controller {
     }
 
     public Termbaum PostfixZuTermbaum() {
+    //ginge sicher auch schön mit einem Stack (wie "damals" bei der "UPN")
       int i, j;
       String t,h;
       Termbaum b = new Termbaum();
