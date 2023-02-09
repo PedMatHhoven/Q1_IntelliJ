@@ -1,4 +1,4 @@
-package _05_Baeume.BinaryTree.mitLuecken;
+package _05_Baeume.BinaryTreeMitVielenExtras;
 
 //offizielle Abiturklasse (im 1. Teil - weiter unten ergänzt durch nützliche Methoden!)
 public class BinaryTree <ContentType> {
@@ -14,9 +14,9 @@ public class BinaryTree <ContentType> {
     }
   }
   //Ende innere Klasse
-
+  
   private BTNode node; //ein Baum besteht aus einer Wurzel (mit Teilbäumen - s.o.)
-
+  
   public BinaryTree() { //Konstruktor 1
     node = null;
   }
@@ -64,12 +64,13 @@ public class BinaryTree <ContentType> {
     if (!isEmpty()) return node.left; else return null;
   }
 
-  public BinaryTree<ContentType> getRightTree() {
+  public BinaryTree <ContentType> getRightTree() {
     if (!isEmpty()) return node.right; else return null;
   }
   //Ende offizielle Abiturklasse
-
+  
   //sinnvolle Erweiterungen (für jeden Binärbaum!)
+  //erst verschiedene Traversierungsalgorithmen
   public String inorder() {
     if (!isEmpty()) return getLeftTree().inorder() + getContent() + " " + getRightTree().inorder();
     else return "";
@@ -77,14 +78,14 @@ public class BinaryTree <ContentType> {
 
   public String preorder() {
     if (!isEmpty()) return getContent() + " " + getLeftTree().preorder() + getRightTree().preorder();
-    else return "";
+    else return ""; 
   }
-
+  
   public String postorder() {
     if (!isEmpty()) return getLeftTree().postorder() + getRightTree().postorder() + getContent() + " ";
     else return "";
   }
-
+  
   public String levelorderMitQueue() {
   //unten eine Version ohne Queue (rekursiv mit 2 Methoden)
   //untere ist kürzer, speichert aber durch Rekursion auch Zwischenwerte auf Stack!
@@ -95,21 +96,21 @@ public class BinaryTree <ContentType> {
     q.enqueue(this); //kompletter Baum wird in die Schlange eingefügt
     while (!q.isEmpty()) {
       BinaryTree <ContentType> tree = q.front();
-      s = s + tree.getContent() + " "; //Wurzel des 1. Baums in der Schlange wird zum Ausgabestring hinzugefügt
+      s = s + tree.getContent() + " "; //Wurzel des 1. Baums in der Schlange wird zu s hinzugefügt
       if (!tree.getLeftTree().isEmpty()) {
-        q.enqueue(tree.getLeftTree()); //linker Teilbaum wird an die Schlange angehangen (wenn nicht leer)
+        q.enqueue(tree.getLeftTree()); //linker Teilbaum wird an die Schlange angehangen
       }
       if (!tree.getRightTree().isEmpty()) {
-        q.enqueue(tree.getRightTree()); //rechter Teilbaum wird an die Schlange angehangen (wenn nicht leer)
+        q.enqueue(tree.getRightTree()); //rechter Teilbaum wird an die Schlange angehangen
       }
       q.dequeue(); //1. Element der Schlange wird gelöscht
     }
     return s;
   }
-
+  
   public String levelorder(){
     String s = "";
-    for (int i=1; i<=height(); i++) s = s + giveLevel(i); //alle Höhen werden nacheinander hinzugefügt
+    for (int i=1; i<=height(); i++) s = s + giveLevel(i);
     return s;
   }
 
@@ -119,11 +120,14 @@ public class BinaryTree <ContentType> {
     else return getLeftTree().giveLevel(level - 1) + getRightTree().giveLevel(level - 1);
   }
 
+  //weitere nützliche Extras
   public int number() {
-    return 0; //noch zu implementieren
+    if (isEmpty()) return 0; else return getLeftTree().number() + 1 + getRightTree().number();
   }
-
+  
   public int height() {
-    return 0; //noch zu implementieren
+    if (isEmpty()) return 0;  
+    else if (getLeftTree().height() > getRightTree().height()) return getLeftTree().height() + 1;
+    else return getRightTree().height() + 1;
   }
 }

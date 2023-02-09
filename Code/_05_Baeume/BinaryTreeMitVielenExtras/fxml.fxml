@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="573.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_05_Baeume.BinaryTree.mitLuecken.Controller">
+<AnchorPane prefHeight="573.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_05_Baeume.BinaryTreeMitVielenExtras.Controller">
    <children>
       <Canvas fx:id="myCanvas" height="325.0" layoutX="29.0" layoutY="44.0" width="823.0" />
       <Button fx:id="btBsp" layoutX="496.0" layoutY="44.0" mnemonicParsing="false" onAction="#btBsp_onClick" prefHeight="25.0" prefWidth="114.0" text="Bsp-Suchbaum" />

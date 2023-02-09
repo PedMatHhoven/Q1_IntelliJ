@@ -1,4 +1,4 @@
-package _05_Baeume.BinaryTree.mitLuecken;
+package _05_Baeume.BinaryTreeMitVielenExtras;
 
 public class Termbaum extends BinaryTree <String> {
   public Termbaum() {

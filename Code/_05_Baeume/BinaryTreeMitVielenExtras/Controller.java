@@ -1,4 +1,4 @@
-package _05_Baeume.BinaryTree.mitLuecken;
+package _05_Baeume.BinaryTreeMitVielenExtras;
 
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
