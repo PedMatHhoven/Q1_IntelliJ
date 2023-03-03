@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.TextField;
-
 import java.util.Random;
 
 public class Controller {
@@ -88,11 +87,11 @@ public class Controller {
     }
 
     public void btMinimum_onClick() {
-      if (Baum.getMinimum() != null) tfMinimum.setText("" + Baum.getMinimum().getWert());
+      if (Baum.minimum() != null) tfMinimum.setText("" + Baum.minimum().getWert());
     }
 
     public void btMaximum_onClick() {
-      if (Baum.getMaximum() != null) tfMaximum.setText("" + Baum.getMaximum().getWert());
+      if (Baum.maximum() != null) tfMaximum.setText("" + Baum.maximum().getWert());
     }
 
     public void btBuildTree_onClick() {

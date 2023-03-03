@@ -2,8 +2,8 @@ package _05_Baeume.BinarySearchTreeMitExtras;
 
 public class BinarySearchTree <ContentType extends ComparableContent <ContentType>> {
 //aus offizieller Abitur-Vorgabe - allerdings Quelltext ein wenig verändert: "this" gelöscht, teils
-//unnötige Klammern entfernt, teils Attributen- durch Methodenaufrufe ersetzt, "remove" ohne Hilfsmethoden, ...!
-//außerdem im unteren Teil weitere nützliche Methoden ergänzt!
+//unnötige Klammern entfernt, teils Attributen- durch Methodenaufrufe ersetzt, "remove"
+//ohne Hilfsmethoden, ...! außerdem im unteren Teil weitere nützliche Methoden ergänzt!
 
   //innere Klasse (Wurzelknoten)
   private class BSTNode <CT extends ComparableContent <CT>> {
@@ -62,7 +62,7 @@ public class BinarySearchTree <ContentType extends ComparableContent <ContentTyp
           BinarySearchTree <ContentType> tree = getRightTree();
           while (!tree.getLeftTree().isEmpty()) tree = tree.getLeftTree();
           ContentType hilfe = tree.getContent();
-          remove(hilfe);
+          remove(hilfe); //Methode wird rekursiv aufgerufen - sorgt für Nachrücken des Restbaumes
           node.content = hilfe;
         }   
       }
@@ -82,18 +82,23 @@ public class BinarySearchTree <ContentType extends ComparableContent <ContentTyp
   }
   //Ende offizielle (angepasste) Abiturklasse
 
-  // weitere nützliche Methoden (siehe teils auch BinaryTree)
-  //zur Abwechslung alle Traversierungsalgorithmen mit Queue formuliert!
-  public void inorder(Queue <ContentType> queue) {
-    if (!isEmpty()) { getLeftTree().inorder(queue); queue.enqueue(getContent()); getRightTree().inorder(queue); }
+  //weitere nützliche Methoden (siehe teils auch BinaryTree)
+  public void inorder(Queue <ContentType> queue) { //zur Abwechslung mal mit Queue implementiert!
+    if (!isEmpty()) {
+      getLeftTree().inorder(queue); queue.enqueue(getContent()); getRightTree().inorder(queue);
+    }
   }
 
- public void preorder(Queue <ContentType> queue) {
-    if (!isEmpty()) { queue.enqueue(getContent()); getLeftTree().preorder(queue); getRightTree().preorder(queue); }
+  public void preorder(Queue <ContentType> queue) {
+    if (!isEmpty()) {
+      queue.enqueue(getContent()); getLeftTree().preorder(queue); getRightTree().preorder(queue);
+    }
   }
   
   public void postorder(Queue <ContentType> queue) {
-     if (!isEmpty()) { getLeftTree().postorder(queue); getRightTree().postorder(queue); queue.enqueue(getContent()); }
+     if (!isEmpty()) {
+       getLeftTree().postorder(queue); getRightTree().postorder(queue); queue.enqueue(getContent());
+     }
   }
   
   public void levelorder(Queue <ContentType> queue) {
@@ -117,15 +122,15 @@ public class BinarySearchTree <ContentType extends ComparableContent <ContentTyp
     else return getRightTree().height() + 1;
   }
   
-  public ContentType getMinimum() {
+  public ContentType minimum() {
     if (isEmpty()) return null;
     else if (getLeftTree().isEmpty()) return getContent();
-    else return getLeftTree().getMinimum();
+    else return getLeftTree().minimum();
   }
   
-  public ContentType getMaximum() {
+  public ContentType maximum() {
     if (isEmpty()) return null;
     else if (getRightTree().isEmpty()) return getContent();
-    else return getRightTree().getMaximum();
+    else return getRightTree().maximum();
   }
 }
