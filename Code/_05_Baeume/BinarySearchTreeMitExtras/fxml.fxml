@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.canvas.Canvas?>
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<AnchorPane prefHeight="573.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_05_Baeume.BinarySearchTreeMitLuecken.Controller">
+
+<AnchorPane prefHeight="573.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_05_Baeume.BinarySearchTreeMitExtras.Controller">
    <children>
       <Canvas fx:id="myCanvas" height="325.0" layoutX="29.0" layoutY="44.0" width="823.0" />
       <Button fx:id="btBsp" layoutX="158.0" layoutY="44.0" mnemonicParsing="false" onAction="#btBsp_onClick" prefHeight="25.0" prefWidth="114.0" text="Bsp-Suchbaum" />

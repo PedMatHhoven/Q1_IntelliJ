@@ -1,4 +1,4 @@
-package _05_Baeume.BinarySearchTreeMitLuecken;
+package _05_Baeume.BinarySearchTreeMitExtras;
 
 public class BinarySearchTree <ContentType extends ComparableContent <ContentType>> {
 //aus offizieller Abitur-Vorgabe - allerdings Quelltext ein wenig verändert: "this" gelöscht, teils
@@ -11,7 +11,7 @@ public class BinarySearchTree <ContentType extends ComparableContent <ContentTyp
     private BinarySearchTree <CT> left, right;
 
     public BSTNode(CT pContent) {
-      content = pContent;    
+      content = pContent;
       left = new BinarySearchTree<>();
       right = new BinarySearchTree<>();
     }
@@ -30,14 +30,17 @@ public class BinarySearchTree <ContentType extends ComparableContent <ContentTyp
   
   public void insert(ContentType pContent) {
     if (pContent != null) {
-      //
+      if (isEmpty()) node = new BSTNode <>(pContent);
+      else if (pContent.isLess(getContent())) getLeftTree().insert(pContent);
+      else if(pContent.isGreater(getContent())) getRightTree().insert(pContent);
     }
   }
   
   public ContentType search(ContentType pContent) {
     if (isEmpty() || pContent == null) return null;
-    return null;
-    //
+    else if (pContent.isLess(getContent())) return getLeftTree().search(pContent);
+    else if (pContent.isGreater(getContent())) return getRightTree().search(pContent);
+    else return pContent;
   }
   
   public void remove(ContentType pContent) { 
@@ -47,7 +50,21 @@ public class BinarySearchTree <ContentType extends ComparableContent <ContentTyp
       } else if (pContent.isGreater(getContent())) {
         getRightTree().remove(pContent);
       } else { //gefunden
-        //4 Fälle - kein Nachfolger, ...
+        if (getLeftTree().isEmpty()) {
+          if (getRightTree().isEmpty()) { //kein Nachfolger
+            node = null; 
+          } else { //nur rechts Nachfolger
+            node = getRightTree().node; 
+          }
+        } else if (getRightTree().isEmpty()) { //nur links Nachfolger
+          node = getLeftTree().node;
+        } else { //links und rechts Nachfolger - suche den nächstgrößten!
+          BinarySearchTree <ContentType> tree = getRightTree();
+          while (!tree.getLeftTree().isEmpty()) tree = tree.getLeftTree();
+          ContentType hilfe = tree.getContent();
+          remove(hilfe);
+          node.content = hilfe;
+        }   
       }
     }
   }
@@ -83,7 +100,7 @@ public class BinarySearchTree <ContentType extends ComparableContent <ContentTyp
     for (int i=1; i<=height(); i++) giveLevel(i, queue);
   }
   
-  public void giveLevel(int level, Queue<ContentType> queue) {
+  public void giveLevel(int level, Queue <ContentType> queue) {
     if (!isEmpty()) {
       if (level == 1) queue.enqueue(getContent());
       else { getLeftTree().giveLevel(level-1, queue); getRightTree().giveLevel(level-1, queue); }
@@ -102,13 +119,13 @@ public class BinarySearchTree <ContentType extends ComparableContent <ContentTyp
   
   public ContentType getMinimum() {
     if (isEmpty()) return null;
-    return null;
-    //
+    else if (getLeftTree().isEmpty()) return getContent();
+    else return getLeftTree().getMinimum();
   }
   
   public ContentType getMaximum() {
     if (isEmpty()) return null;
-    return null;
-    //
+    else if (getRightTree().isEmpty()) return getContent();
+    else return getRightTree().getMaximum();
   }
 }

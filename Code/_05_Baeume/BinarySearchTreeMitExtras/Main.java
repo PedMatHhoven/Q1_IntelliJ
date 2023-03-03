@@ -1,4 +1,4 @@
-package _05_Baeume.BinarySearchTreeMitLuecken;
+package _05_Baeume.BinarySearchTreeMitExtras;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

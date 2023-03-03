@@ -1,4 +1,4 @@
-package _05_Baeume.BinarySearchTreeMitLuecken;
+package _05_Baeume.BinarySearchTreeMitExtras;
 
 public interface ComparableContent <ContentType> {
   public boolean isGreater(ContentType pContent);

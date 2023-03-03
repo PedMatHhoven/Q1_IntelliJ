@@ -1,6 +1,6 @@
-package _05_Baeume.BinarySearchTreeMitLuecken;
+package _05_Baeume.BinarySearchTreeMitExtras;
 
-public class Entry implements ComparableContent<Entry> {
+public class Entry implements ComparableContent <Entry> {
   private int wert;
   
   public Entry (int Zahl) {

@@ -1,4 +1,4 @@
-package _05_Baeume.BinarySearchTreeMitLuecken;
+package _05_Baeume.BinarySearchTreeMitExtras;
 
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
@@ -22,13 +22,13 @@ public class Controller {
     @FXML private TextField tfHeight;
     @FXML private TextField tfMinimum;
     @FXML private TextField tfMaximum;
-    private BinarySearchTree<Entry> Baum = new BinarySearchTree();
-    private Queue<Entry> queue = new Queue();
+    private BinarySearchTree <Entry> Baum = new BinarySearchTree();
+    private Queue <Entry> queue = new Queue();
 
     public void btBsp_onClick() {
       Baum = new BinarySearchTree();
       int[] Zahlen = {10, 5, 15, 2, 7, 13, 17, 8, 9, 6, 4, 14, 16, 1, 22, 11, 12};
-      for (int i = 0; i < Zahlen.length; i++)  Baum.insert(new Entry(Zahlen[i]));
+      for (int i = 0; i < Zahlen.length; i++) Baum.insert(new Entry(Zahlen[i]));
       paint(myCanvas.getGraphicsContext2D());
     }
 
@@ -99,7 +99,7 @@ public class Controller {
       String[] s = tfBuildTree.getText().split(" ", 0); //aufsplitten an " ", Teile in String-array
       int laenge = s.length;
       int[] Reihe = new int[laenge];
-      for (int i  = 0; i < laenge; i++) Reihe[i] = Integer.parseInt(s[i]); //umgewandelt zu Integer-array
+      for (int i  = 0; i < laenge; i++) Reihe[i] = Integer.parseInt(s[i]);
       Reihe = bubblesort(Reihe); //sortierte Liste, damit Baum maximal ausgeglichen
       Baum = new BinarySearchTree();
       FuegeEin(Reihe, 0, laenge - 1);
@@ -115,7 +115,10 @@ public class Controller {
     }
 
     public void FuegeEin(int[] Feld, int l, int r) {
-      //
+      if (l <= r) {
+          int m = (l+r) / 2; Baum.insert(new Entry(Feld[m]));
+          FuegeEin(Feld, l, m-1); FuegeEin(Feld, m+1, r);
+      }
     }
 
     public void paint (GraphicsContext g) {
@@ -123,7 +126,7 @@ public class Controller {
       displayTree(g, Baum, 417, 65, 160, 55, 15);
     }
 
-    private void displayTree(GraphicsContext g, BinarySearchTree<Entry> pTree, int x, int y, int hGap, int vGap, int radius) {
+    private void displayTree(GraphicsContext g, BinarySearchTree <Entry> pTree, int x, int y, int hGap, int vGap, int radius) {
       if (!pTree.isEmpty()) {
           g.strokeOval(x - radius, y - radius, 2 * radius, 2 * radius);
           g.fillText("" + pTree.getContent().getWert(), x - 6, y + 4);

@@ -1,4 +1,4 @@
-package _05_Baeume.BinarySearchTreeMitLuecken;
+package _05_Baeume.BinarySearchTreeMitExtras;
 
 public class Queue <ContentType> {
   private class QueueNode {
